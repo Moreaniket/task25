@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="resetps" method="post">
+    <input type="email" name="username" placeholder="Enter Your UserName"><br><br>
+    <input type="password" name="old_password" placeholder="Enter Your Old Password"><br><br>
+    <input type="password" name="new_password" placeholder="Enter Your New Password"><br><br>
+    <button type="submit">Reset</button>
+    {% csrf_token %}
+</form>
+</body>
+</html>

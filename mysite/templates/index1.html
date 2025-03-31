@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distance Calculator</title>
+</head>
+<body>
+    <h1>Distance Calculator</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label>Source Location:</label>
+        <input type="text" name="source" required><br><br>
+        <label>Destination Location:</label>
+        <input type="text" name="destination" required><br><br>
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
